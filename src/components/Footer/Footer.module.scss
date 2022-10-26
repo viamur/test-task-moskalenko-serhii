@@ -1,0 +1,33 @@
+@import '../../sass/mixin';
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--accent-color);
+  @include mq(desk) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.logo {
+  cursor: pointer;
+}
+.logo__text {
+  color: var(--grey-light);
+
+  font-family: 'Roboto Black', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.copyrayting {
+  color: var(--grey-light);
+
+  margin-left: 20px;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

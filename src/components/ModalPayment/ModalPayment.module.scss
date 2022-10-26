@@ -1,0 +1,50 @@
+@import '../../sass/mixin';
+.formaAll {
+  width: 100%;
+}
+.title,
+.titleCard {
+  text-align: center;
+  color: var(--accent-color);
+
+  font-family: 'Roboto Black', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+
+  margin-bottom: 10px;
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
+}
+.titleCard {
+  margin-top: 30px;
+}
+.formPhone,
+.formCard {
+  display: flex;
+  flex-direction: column;
+}
+.formCard {
+}
+.label {
+  margin-bottom: 2px;
+  margin-top: 10px;
+  color: var(--grey);
+}
+.btnPay {
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 10px 30px;
+  border-radius: 7px;
+  margin-top: 20px;
+
+  transition: all var(--transition);
+}
+.btnPay:hover,
+.btnPay:focus {
+  background-color: var(--accent-color);
+  color: var(--persik);
+}

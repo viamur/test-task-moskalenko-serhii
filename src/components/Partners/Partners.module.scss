@@ -1,0 +1,41 @@
+@import '../../sass/mixin';
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--grey-light);
+  @include mq(desk) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.title {
+  text-align: center;
+  color: var(--accent-color);
+
+  font-family: 'Roboto Black', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+
+  margin-bottom: 30px;
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
+}
+.item {
+  display: flex;
+  margin: 0 auto;
+
+  width: 100px;
+  height: 100px;
+
+  cursor: pointer;
+  @include mq(desk) {
+    width: 150px;
+    height: 150px;
+  }
+}
+.img {
+}

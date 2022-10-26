@@ -1,0 +1,140 @@
+@import '../../sass/mixin';
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include mq(desk) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.title {
+  text-align: center;
+  color: var(--accent-color);
+
+  font-family: 'Roboto Black', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  letter-spacing: 1px;
+
+  margin-bottom: 30px;
+  @include mq(desk) {
+    margin-bottom: 50px;
+  }
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  @include mq(tab) {
+    gap: 20px;
+  }
+  &__item {
+    // flex-basis: calc((100% - 1 * 20px) / 2);
+    flex-basis: 100%;
+    @include mq(tab) {
+      flex-basis: calc((100% - 1 * 30px) / 2);
+    }
+    @include mq(desk) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      flex-basis: calc((100% - 3 * 20px) / 4);
+    }
+  }
+}
+.img {
+  width: 100%;
+
+  margin-bottom: 20px;
+  @include mq(tab) {
+    margin-bottom: 30px;
+  }
+}
+.products__title {
+  color: var(--gray);
+  letter-spacing: 1px;
+
+  margin-bottom: 10px;
+  @include mq(tab) {
+    margin-bottom: 20px;
+  }
+}
+.list {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  letter-spacing: 0.5px;
+
+  @include mq(tab) {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+}
+.benefits:not(:last-child) {
+  margin-bottom: 5px;
+}
+.benefits::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  transform: translateY(5px);
+
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+
+  background: var(--persik);
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include mq(tab) {
+    padding-left: 20px;
+  }
+}
+.cost {
+  color: var(--accent-color);
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  font-family: 'Roboto Black', sans-serif;
+  font-weight: bold;
+}
+.btn {
+  padding: 5px 20px;
+  transition: all var(--transition);
+
+  cursor: pointer;
+
+  color: var(--grey-light);
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  @include mq(tab) {
+    padding: 8dpx 30px;
+  }
+  @include mq(desk) {
+    padding: 10px 30px;
+  }
+}
+.btn:hover,
+.btn:focus {
+  color: var(--accent-color);
+  background-color: var(--grey-light);
+}
+.wr {
+  width: 280px;
+  @include mq(mob) {
+    width: 440px;
+  }
+  @include mq(tab) {
+    width: 336px;
+  }
+  @include mq(desk) {
+    width: 258px;
+  }
+}
